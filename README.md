@@ -1,4 +1,4 @@
-# SDDM Theme for CutefishOS
+# SDDM Theme for YoyoOS
 
 ![screenshot](screenshot.png)
 
