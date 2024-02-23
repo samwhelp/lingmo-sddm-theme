@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 YoyoOS.
+ * Copyright (C) 2021 LingmoOS.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -21,7 +21,7 @@ import QtQuick 2.12
 import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 import QtGraphicalEffects 1.0
-import FishUI 1.0 as FishUI
+import LingmoUI 1.0 as LingmoUI
 
 ToolButton {
     id: root

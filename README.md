@@ -1,4 +1,4 @@
-# SDDM Theme for YoyoOS
+# SDDM Theme for LingmoOS
 
 ![screenshot](screenshot.png)
 

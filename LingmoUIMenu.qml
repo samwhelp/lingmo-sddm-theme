@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 YoyoOS.
+ * Copyright (C) 2021 LingmoOS.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -21,7 +21,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Templates 2.12 as T
 import QtQuick.Window 2.12
-import FishUI 1.0 as FishUI
+import LingmoUI 1.0 as LingmoUI
 import QtGraphicalEffects 1.0
 import "./"
 
@@ -35,11 +35,11 @@ T.Menu
                              contentHeight + topPadding + bottomPadding)
 
     margins: 0
-    verticalPadding: FishUI.Units.smallSpacing
-    spacing: FishUI.Units.smallSpacing
+    verticalPadding: LingmoUI.Units.smallSpacing
+    spacing: LingmoUI.Units.smallSpacing
     transformOrigin: !cascade ? Item.Top : (mirrored ? Item.TopRight : Item.TopLeft)
 
-    delegate: FishUIMenuItem { }
+    delegate: LingmoUIMenuItem { }
 
     enter: Transition {
         NumberAnimation {
@@ -90,8 +90,8 @@ T.Menu
         ScrollBar.vertical: ScrollBar {}
     }
 
-    background: FishUI.RoundedRect {
-        radius: FishUI.Theme.hugeRadius
+    background: LingmoUI.RoundedRect {
+        radius: LingmoUI.Theme.hugeRadius
         opacity: 1
 
         layer.enabled: true
@@ -106,9 +106,9 @@ T.Menu
     }
 
     T.Overlay.modal: Rectangle  {
-        color: Qt.rgba(control.FishUI.Theme.backgroundColor.r,
-                       control.FishUI.Theme.backgroundColor.g,
-                       control.FishUI.Theme.backgroundColor.b, 0.4)
+        color: Qt.rgba(control.LingmoUI.Theme.backgroundColor.r,
+                       control.LingmoUI.Theme.backgroundColor.g,
+                       control.LingmoUI.Theme.backgroundColor.b, 0.4)
         Behavior on opacity {
             NumberAnimation {
                 duration: 150
@@ -118,9 +118,9 @@ T.Menu
     }
 
     T.Overlay.modeless: Rectangle {
-        color: Qt.rgba(control.FishUI.Theme.backgroundColor.r,
-                       control.FishUI.Theme.backgroundColor.g,
-                       control.FishUI.Theme.backgroundColor.b, 0.4)
+        color: Qt.rgba(control.LingmoUI.Theme.backgroundColor.r,
+                       control.LingmoUI.Theme.backgroundColor.g,
+                       control.LingmoUI.Theme.backgroundColor.b, 0.4)
         Behavior on opacity {
             NumberAnimation {
                 duration: 150

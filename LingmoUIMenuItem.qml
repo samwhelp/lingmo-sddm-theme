@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 YoyoOS.
+ * Copyright (C) 2021 LingmoOS.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -22,15 +22,15 @@ import QtQuick.Templates 2.12 as T
 import QtQuick.Controls 2.12
 import QtQuick.Controls.impl 2.12
 
-import FishUI 1.0 as FishUI
+import LingmoUI 1.0 as LingmoUI
 
 T.MenuItem
 {
     id: control
 
-    property color hoveredColor: FishUI.Theme.darkMode ? Qt.rgba(255, 255, 255, 0.2)
+    property color hoveredColor: LingmoUI.Theme.darkMode ? Qt.rgba(255, 255, 255, 0.2)
                                                        : Qt.rgba(0, 0, 0, 0.1)
-    property color pressedColor: FishUI.Theme.darkMode ? Qt.rgba(255, 255, 255, 0.1)
+    property color pressedColor: LingmoUI.Theme.darkMode ? Qt.rgba(255, 255, 255, 0.1)
                                                        : Qt.rgba(0, 0, 0, 0.2)
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
@@ -38,22 +38,22 @@ T.MenuItem
     implicitHeight: visible ? Math.max(implicitBackgroundHeight + topInset + bottomInset,
                                        implicitContentHeight + topPadding + bottomPadding,
                                        implicitIndicatorHeight + topPadding + bottomPadding) : 0
-    verticalPadding: FishUI.Units.smallSpacing
+    verticalPadding: LingmoUI.Units.smallSpacing
     hoverEnabled: true
-    topPadding: FishUI.Units.smallSpacing
-    bottomPadding: FishUI.Units.smallSpacing
+    topPadding: LingmoUI.Units.smallSpacing
+    bottomPadding: LingmoUI.Units.smallSpacing
 
-    icon.width: FishUI.Units.iconSizes.medium
-    icon.height: FishUI.Units.iconSizes.medium
+    icon.width: LingmoUI.Units.iconSizes.medium
+    icon.height: LingmoUI.Units.iconSizes.medium
 
-    icon.color: control.enabled ? (control.highlighted ? control.FishUI.Theme.highlightColor : control.FishUI.Theme.textColor) :
-                             control.FishUI.Theme.disabledTextColor
+    icon.color: control.enabled ? (control.highlighted ? control.LingmoUI.Theme.highlightColor : control.LingmoUI.Theme.textColor) :
+                             control.LingmoUI.Theme.disabledTextColor
 
     contentItem: IconLabel {
         readonly property real arrowPadding: control.subMenu && control.arrow ? control.arrow.width + control.spacing : 0
         readonly property real indicatorPadding: control.checkable && control.indicator ? control.indicator.width + control.spacing : 0
-        leftPadding: !control.mirrored ? indicatorPadding + FishUI.Units.smallSpacing * 2 : arrowPadding
-        rightPadding: control.mirrored ? indicatorPadding : arrowPadding + FishUI.Units.smallSpacing * 2
+        leftPadding: !control.mirrored ? indicatorPadding + LingmoUI.Units.smallSpacing * 2 : arrowPadding
+        rightPadding: control.mirrored ? indicatorPadding : arrowPadding + LingmoUI.Units.smallSpacing * 2
 
         spacing: control.spacing
         mirrored: control.mirrored
@@ -63,20 +63,20 @@ T.MenuItem
         icon: control.icon
         text: control.text
         font: control.font
-        color: control.enabled ? control.pressed || control.hovered ? control.FishUI.Theme.textColor : 
-               FishUI.Theme.textColor : control.FishUI.Theme.disabledTextColor
+        color: control.enabled ? control.pressed || control.hovered ? control.LingmoUI.Theme.textColor : 
+               LingmoUI.Theme.textColor : control.LingmoUI.Theme.disabledTextColor
     }
 
     background: Rectangle {
         implicitWidth: 200
-        implicitHeight: control.visible ? FishUI.Units.rowHeightAlt : 0
-        radius: FishUI.Theme.mediumRadius
+        implicitHeight: control.visible ? LingmoUI.Units.rowHeightAlt : 0
+        radius: LingmoUI.Theme.mediumRadius
         opacity: 1
 
         anchors {
             fill: parent
-            leftMargin: FishUI.Units.smallSpacing
-            rightMargin: FishUI.Units.smallSpacing
+            leftMargin: LingmoUI.Units.smallSpacing
+            rightMargin: LingmoUI.Units.smallSpacing
         }
 
         color: control.pressed || highlighted ? control.pressedColor : control.hovered ? control.hoveredColor : "transparent"

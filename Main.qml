@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 YoyoOS.
+ * Copyright (C) 2021 LingmoOS.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -23,9 +23,9 @@ import QtQuick.Controls 2.12 as QQC2
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.0
 
-import Yoyo.Accounts 1.0 as Accounts
-import Yoyo.System 1.0 as System
-import FishUI 1.0 as FishUI
+import Lingmo.Accounts 1.0 as Accounts
+import Lingmo.System 1.0 as System
+import LingmoUI 1.0 as LingmoUI
 
 import SddmComponents 2.0
 import "./"
@@ -43,7 +43,7 @@ Item {
     Image {
         id: wallpaperImage
         anchors.fill: parent
-        source: "file://" + "/usr/share/backgrounds/yoyoos/default.jpg"
+        source: "file://" + "/usr/share/backgrounds/lingmoos/default.jpg"
         sourceSize: Qt.size(width * Screen.devicePixelRatio,
                             height * Screen.devicePixelRatio)
         fillMode: Image.PreserveAspectCrop
@@ -102,7 +102,7 @@ Item {
         QQC2.Label {
             id: dateLabel
             anchors.top: timeLabel.bottom
-            anchors.topMargin: FishUI.Units.largeSpacing
+            anchors.topMargin: LingmoUI.Units.largeSpacing
             anchors.horizontalCenter: parent.horizontalCenter
             font.pointSize: 19
             color: "white"
@@ -144,23 +144,23 @@ Item {
     Item {
         id: _mainItem
         anchors.centerIn: parent
-        width: 260 + FishUI.Units.largeSpacing * 3
-        height: _mainLayout.implicitHeight + FishUI.Units.largeSpacing * 4
+        width: 260 + LingmoUI.Units.largeSpacing * 3
+        height: _mainLayout.implicitHeight + LingmoUI.Units.largeSpacing * 4
 
         Layout.alignment: Qt.AlignHCenter
 
         Rectangle {
             anchors.fill: parent
-            radius: FishUI.Theme.bigRadius + 2
-            color: FishUI.Theme.darkMode ? "#424242" : "white"
+            radius: LingmoUI.Theme.bigRadius + 2
+            color: LingmoUI.Theme.darkMode ? "#424242" : "white"
             opacity: 0.5
         }
 
         ColumnLayout {
             id: _mainLayout
             anchors.fill: parent
-            anchors.margins: FishUI.Units.largeSpacing * 1.5
-            spacing: FishUI.Units.smallSpacing * 1.5
+            anchors.margins: LingmoUI.Units.largeSpacing * 1.5
+            spacing: LingmoUI.Units.smallSpacing * 1.5
 
             UserView {
                 id: _userView
@@ -179,8 +179,8 @@ Item {
                 echoMode: TextInput.Password
 
                 background: Rectangle {
-                    color: FishUI.Theme.darkMode ? "#B6B6B6" : "white"
-                    radius: FishUI.Theme.bigRadius
+                    color: LingmoUI.Theme.darkMode ? "#B6B6B6" : "white"
+                    radius: LingmoUI.Theme.bigRadius
                     opacity: 0.5
                 }
 
@@ -208,9 +208,9 @@ Item {
                 }
 
                 background: Rectangle {
-                    color: FishUI.Theme.darkMode ? "#B6B6B6" : "white"
+                    color: LingmoUI.Theme.darkMode ? "#B6B6B6" : "white"
                     opacity: unlockBtn.pressed ? 0.3 : unlockBtn.hovered ? 0.4 : 0.5
-                    radius: FishUI.Theme.bigRadius
+                    radius: LingmoUI.Theme.bigRadius
                 }
             }
         }
@@ -219,10 +219,10 @@ Item {
     Item {
         anchors.left: parent.left
         anchors.bottom: parent.bottom
-        anchors.leftMargin: FishUI.Units.largeSpacing
-        anchors.bottomMargin: FishUI.Units.largeSpacing
+        anchors.leftMargin: LingmoUI.Units.largeSpacing
+        anchors.bottomMargin: LingmoUI.Units.largeSpacing
 
-        width: sessionMenu.implicitWidth + FishUI.Units.largeSpacing
+        width: sessionMenu.implicitWidth + LingmoUI.Units.largeSpacing
         height: sessionMenu.implicitHeight
 
         SessionMenu {
@@ -237,30 +237,30 @@ Item {
     Item {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
-        anchors.rightMargin: FishUI.Units.largeSpacing
-        anchors.bottomMargin: FishUI.Units.smallSpacing * 1.5
+        anchors.rightMargin: LingmoUI.Units.largeSpacing
+        anchors.bottomMargin: LingmoUI.Units.smallSpacing * 1.5
 
         width: 50
-        height: 50 + FishUI.Units.largeSpacing
+        height: 50 + LingmoUI.Units.largeSpacing
 
 
-        FishUI.RoundImageButton {
+        LingmoUI.RoundImageButton {
             anchors.fill: parent
             width: 50
-            height: 50 + FishUI.Units.largeSpacing
+            height: 50 + LingmoUI.Units.largeSpacing
 
             size: 50
             source: "system-shutdown-symbolic.svg"
-            iconMargins: FishUI.Units.largeSpacing
+            iconMargins: LingmoUI.Units.largeSpacing
 
             // anchors.top: message.bottom
-            // anchors.topMargin: FishUI.Units.largeSpacing
+            // anchors.topMargin: LingmoUI.Units.largeSpacing
             // anchors.horizontalCenter: parent.horizontalCenter
             onClicked: actionMenu.popup()
         }
     }
 
-    FishUIMenu {
+    LingmoUIMenu {
         id: actionMenu
 
         QQC2.MenuItem {
@@ -282,7 +282,7 @@ Item {
         }
     }
 
-    // FishUI.RoundImageButton {
+    // LingmoUI.RoundImageButton {
     //     width: 50
     //     height: 50
 
@@ -291,14 +291,14 @@ Item {
     //     iconMargins: 10
 
     //     anchors.top: message.bottom
-    //     anchors.topMargin: FishUI.Units.largeSpacing
+    //     anchors.topMargin: LingmoUI.Units.largeSpacing
     //     anchors.horizontalCenter: parent.horizontalCenter
     // }
 
     QQC2.Label {
         id: message
         anchors.top: _mainItem.bottom
-        anchors.topMargin: FishUI.Units.largeSpacing
+        anchors.topMargin: LingmoUI.Units.largeSpacing
         anchors.horizontalCenter: parent.horizontalCenter
         font.bold: true
         text: root.notificationMessage

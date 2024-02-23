@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 YoyoOS.
+ * Copyright (C) 2021 LingmoOS.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -23,22 +23,22 @@ import QtQuick.Controls 2.12 as QQC2
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.0
 
-import Yoyo.Accounts 1.0 as Accounts
-import Yoyo.System 1.0 as System
-import FishUI 1.0 as FishUI
+import Lingmo.Accounts 1.0 as Accounts
+import Lingmo.System 1.0 as System
+import LingmoUI 1.0 as LingmoUI
 
 ListView {
     id: control
 
     clip: true
-    height: 80 + FishUI.Units.largeSpacing * 2
+    height: 80 + LingmoUI.Units.largeSpacing * 2
     orientation: ListView.Horizontal
     highlightRangeMode: ListView.StrictlyEnforceRange
 
     preferredHighlightBegin: width / 2 - userItemSize / 2
     preferredHighlightEnd: preferredHighlightBegin
 
-    spacing: FishUI.Units.largeSpacing * 2
+    spacing: LingmoUI.Units.largeSpacing * 2
 
     property int userItemSize: 60
 
@@ -61,7 +61,7 @@ ListView {
 
         ColumnLayout {
             anchors.fill: parent
-            spacing: FishUI.Units.smallSpacing * 1.5
+            spacing: LingmoUI.Units.smallSpacing * 1.5
 
             Image {
                 id: userIcon
