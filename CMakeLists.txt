@@ -18,4 +18,4 @@ install(FILES theme.conf DESTINATION /usr/share/sddm/themes/lingmo)
 install(FILES hidpi.conf DESTINATION /etc/sddm.conf.d/)
 install(FILES sddm.conf DESTINATION /etc/)
 
-# install(FILES "faces/.face.icon" DESTINATION /usr/share/sddm/faces/)
+install(DIRECTORY faces DESTINATION /usr/share/sddm/themes/lingmo)
