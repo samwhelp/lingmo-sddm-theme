@@ -43,7 +43,8 @@ Item {
     Image {
         id: wallpaperImage
         anchors.fill: parent
-        source: "file://" + "/usr/share/backgrounds/lingmoos/default.jpg"
+        // source: "file://" + "/usr/share/backgrounds/lingmoos/default.jpg"
+        source: "file://" + wallpaper.path
         sourceSize: Qt.size(width * Screen.devicePixelRatio,
                             height * Screen.devicePixelRatio)
         fillMode: Image.PreserveAspectCrop
