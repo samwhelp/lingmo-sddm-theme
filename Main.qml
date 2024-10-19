@@ -44,7 +44,8 @@ Item {
     Image {
         id: wallpaperImage
         anchors.fill: parent
-        source: "file://" + "/usr/share/backgrounds/lingmoos/default.jpg" //TODO: dynamically change to wallpaper for user
+        // TODO: dynamically change to wallpaper for user
+        source: "file://" + "/usr/share/backgrounds/lingmoos/default.jpg"
         sourceSize: Qt.size(width * Screen.devicePixelRatio,
                             height * Screen.devicePixelRatio)
         fillMode: Image.PreserveAspectCrop
