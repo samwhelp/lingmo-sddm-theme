@@ -1,3 +1,10 @@
+lingmo-sddm-theme (2.7.0) unstable; urgency=high
+
+  * Fixed background issue
+  * New Release
+
+ -- LingmoOS OS Team <team@lingmo.org>  Sun, 20 Oct 2024 01:50:00 +0800
+
 lingmo-sddm-theme (2.6.0) unstable; urgency=high
 
   * Fixed background issue where user settings cannot be displayed
