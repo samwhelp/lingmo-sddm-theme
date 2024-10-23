@@ -45,7 +45,10 @@ Item {
         id: wallpaperImage
         anchors.fill: parent
         // TODO: dynamically change to wallpaper for user
-        source: "file://" + "/usr/share/backgrounds/lingmoos/default.jpg"
+        //source: "file://" + "/usr/share/backgrounds/lingmoos/default.jpg"
+        // ref: https://github.com/sddm/sddm/blob/develop/data/themes/maldives/Main.qml#L60
+        // ref: https://github.com/sddm/sddm/blob/develop/data/themes/maldives/theme.conf#L2
+        source: Qt.resolvedUrl(config.background)
         sourceSize: Qt.size(width * Screen.devicePixelRatio,
                             height * Screen.devicePixelRatio)
         fillMode: Image.PreserveAspectCrop
